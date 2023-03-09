@@ -1,0 +1,79 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Lucida Console', sans-serif;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+header > h1 {
+  text-align: start;
+  font-size: 50px;
+}
+
+section {
+  width: 45%;
+  min-width: 14rem;
+  margin: 0 30px 0 30px;
+}
+
+li {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 5px;
+  background-color: white;
+  box-shadow: 2px 2px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+input {
+  padding: 3px;
+  width: 100%;
+  border: 2px solid;
+  font-weight: 600;
+}
+
+.title-recent-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+.players-list {
+  border: 2px solid;
+}
+
+.player-container {
+  display: flex;
+  padding: 5px;
+  font-weight: 600;
+}
