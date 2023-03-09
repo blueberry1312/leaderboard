@@ -25,10 +25,10 @@
 - [📝 License](#license)
 
 
-# 📖 [To-Do-List] <a name="about-project"></a>
+# 📖 [Leaderboard] <a name="about-project"></a>
 
 
-**[To-Do-List]** In this project, I built a simple HTML Leaderboard page. The list with scores will be styled according to the specifications listed. This simple web page will be built using webpack and served by a webpack dev server.
+**[Leaderboard]** In this project, I built a simple HTML Leaderboard page. The list with scores will be styled according to the specifications listed. This simple web page will be built using webpack and served by a webpack dev server.
  
 
 ## 🛠 Built With <a name="built-with"></a>
