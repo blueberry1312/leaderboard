@@ -6,22 +6,6 @@ const [name, score] = form.elements;
 const objPlayers = new Players();
 const btnRefresh = document.querySelector('.refresh');
 
-if (localStorage.savedPlayers) {
-  objPlayers.players = JSON.parse(localStorage.getItem('savedPlayers'));
-}
-
-/* Creating a new game
-const keyNewGameAPIs = async () => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
-    method: 'POST',
-    body: JSON.stringify({ name: "Nestor's cool name" }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-};
-*/
-
 const getAPIs = async () => {
   const response = await fetch(`
     https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/axlELeQfujsKhZWX2fBD/scores`);
@@ -60,10 +44,7 @@ form.addEventListener('submit', async (e) => {
   responsePost.textContent = await postPlayer(newPlayer);
   name.value = '';
   score.value = '';
-  setTimeout(() => {
-    responsePost.textContent = '';
-  }, 5000);
+  responsePost.textContent = '';
 });
 btnRefresh.addEventListener('click', getAPIs);
 objPlayers.displayPlayers();
-objPlayers.populateFields();
