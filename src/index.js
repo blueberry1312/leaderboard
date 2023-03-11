@@ -1,5 +1,5 @@
 import Players from './modules/players.js';
-import './style.css';
+import '../dist/output.css';
 
 const form = document.querySelector('.form-input');
 const [name, score] = form.elements;
@@ -47,4 +47,3 @@ form.addEventListener('submit', async (e) => {
   responsePost.textContent = '';
 });
 btnRefresh.addEventListener('click', getAPIs);
-objPlayers.displayPlayers();

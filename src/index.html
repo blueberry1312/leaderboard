@@ -6,34 +6,36 @@
     <title>Leaderboard by Nestor</title>
 </head>
 <body>
-    <header>
-        <h1>Leaderboard</h1>
-    </header>
-    <main>
-        <section>
-            <div class="title-recent-score">
-                <h2>Recent scores</h2>
-                <button type="button" class="refresh">Refresh</button>
-            </div>
-            <div class="players-list"></div>
-        </section>
-        <section>
-            <h2>Add your score</h2>
-            <form class="form-input">
-                <ul>
-                    <li>
-                        <input type="text" name="name" placeholder="Your name" required />
-                    </li>
-                    <li>
-                        <input type="number" name="score" placeholder="Your score" required />
-                    </li>
-                    <li>
-                        <button type="submit">Submit</button>
-                    </li>
-                </ul>
-            </form>
-            <span class="response-post"></span>
-        </section>
-    </main>
+    <div class="container max-w-max max-h-max rounded shadow-lg border-gray-700 bg-indigo-300 ">
+        <header class="grid place-content-center">
+            <h1 class="text-4xl p-8">Leaderboard</h1>
+        </header>
+        <main class="flex m-5">
+            <section class="grid m-10">
+                <div class="title-recent-score flex space-x-4 my-4">
+                    <h2 class="text-2xl">Recent scores</h2>
+                    <button type="button" class="refresh self-start block uppercase mx-auto shadow bg-indigo-600 hover:bg-indigo-800 focus:shadow-outline focus:outline-none text-indigo-200 text-xs p-2 rounded">Refresh</button>
+                </div>
+                <table class="players-list table-fixed border-4 border-indigo-400"></table>
+            </section>
+            <section class="m-10">
+                <h2 class="text-2xl my-4">Add your score</h2>
+                <form class="form-input">
+                    <ul>
+                        <li>
+                            <input type="text" name="name" placeholder="Your name" required />
+                        </li>
+                        <li>
+                            <input type="number" name="score" placeholder="Your score" required />
+                        </li>
+                        <li>
+                            <button type="submit" class="block uppercase mx-auto shadow bg-indigo-600 hover:bg-indigo-800 focus:shadow-outline focus:outline-none text-indigo-200 text-xs p-2 rounded my-1">Submit</button>
+                        </li>
+                    </ul>
+                </form>
+                <span class="response-post"></span>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
