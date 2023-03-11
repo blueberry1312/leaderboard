@@ -5,43 +5,36 @@ const Players = class {
     this.players = [];
   }
 
-  populateFields = () => {
-    localStorage.setItem('savedPlayers', JSON.stringify(this.players));
-  };
-
-  removePlayer(player) {
-    const result = this.players.filter((b) => b !== player);
-    this.players = result;
-    this.populateFields();
-  }
-
   addPlayer = (newPlayer) => {
     this.players.push(newPlayer);
-    this.populateFields();
     this.displayPlayers();
   };
 
   displayPlayers = () => {
     const listPlayers = document.querySelector('.players-list');
+    const tHead = document.createElement('thead');
+    const tHeader1 = document.createElement('th');
+    const tHeader2 = document.createElement('th');
+    const tBody = document.createElement('tbody');
+    tHeader1.textContent = 'User';
+    tHeader2.textContent = 'Score';
+    tHead.appendChild(tHeader1);
+    tHead.appendChild(tHeader2);
     listPlayers.innerHTML = '';
-    if (this.players.length > 0) {
-      this.players.map((player) => {
-        const playerDiv = document.createElement('tr');
-        const elementPlayer = document.createElement('td');
-        elementPlayer.textContent = `${player.user}: ${player.score}`;
-        playerDiv.classList.add('player-container');
-        playerDiv.appendChild(elementPlayer);
-        listPlayers.appendChild(playerDiv);
-        return listPlayers;
-      });
-    } else {
+    listPlayers.appendChild(tHead);
+    listPlayers.appendChild(tBody);
+    this.players.map((player) => {
       const playerDiv = document.createElement('tr');
-      const elementPlayer = document.createElement('td');
-      elementPlayer.textContent = 'Add new player';
+      const elementPlayer1 = document.createElement('td');
+      const elementPlayer2 = document.createElement('td');
+      elementPlayer1.textContent = `${player.user}`;
+      elementPlayer2.textContent = `${player.score}`;
       playerDiv.classList.add('player-container');
-      playerDiv.appendChild(elementPlayer);
-      listPlayers.appendChild(playerDiv);
-    }
+      playerDiv.appendChild(elementPlayer1);
+      playerDiv.appendChild(elementPlayer2);
+      tBody.appendChild(playerDiv);
+      return listPlayers;
+    });
   };
 };
 
